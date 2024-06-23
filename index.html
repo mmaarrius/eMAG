@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/headers.css">
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/main_page.css">
+  <title>eMAG.ro</title>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-container">
+      <img src="images/icons/menu.png" class="menu js-menu">
+      <a href="index.html">
+        <img src="images/icons/emag_logo.png" class="logo">
+      </a>
+    </div>
+    <div class="input-container">
+      <input type="text" placeholder="Incepe o noua cautare" class="js-search-box">
+      <img src="images/icons/search.png">
+    </div>
+    <nav>
+     <div class="button-container" onclick="window.location.href = 'favorites.html'">
+      <div class="notification-fav"></div>
+      <img src="images/icons/heart.png">
+      <p>Favorite</p>
+     </div>
+     <div class="button-container js-cartPage-button" onclick="window.location.href = 'cart.html'">
+      <div class="notification-cart"></div>
+      <img src="images/icons/shopping-cart.png">
+      <p>Cosul meu</p>
+     </div>
+    </nav>
+  </div>
+
+  <div class="sidebar js-sidebar">
+    <div class="phone-nav-buttons">
+      <button class="phone-button"><a href="cart.html">Cosul meu</a></button>
+      <button class="phone-button"><a href="favorites.html">Favorite</a></button>
+    </div>
+    <h2>Categorii</h2>
+    <button data-category="">Toate produsele <span>&#62;</span></button>
+    <button data-category="IT,Mobile&Gaming">IT, Mobile & Gaming <span>&#62;</span></button>
+    <button data-category="Copii&Jucarii">Copii & Jucarii <span>&#62;</span></button>
+    <button data-category="Haine&Accesorii">Haine & Accesorii <span>&#62;</span></button>
+  </div>
+  <div class="overlay js-overlay"></div>
+
+  <div class="category-details js-category-details">
+    <h2>Categorie selectata</h2>
+    <p></p>
+  </div>
+
+  <div class="products-grid js-products-grid"></div>
+
+  <script type="module" src="scripts/sidebar.js" ></script>
+  <script type="module" src="scripts/emag.js"></script>
+</body>
+</html>
