@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/headers.css">
+  <link rel="stylesheet" href="styles/favorites.css">
+  <link rel="stylesheet" href="styles/toast.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="images/icons/emag_logo.png" class="logo">
+      </a>
+    </div>
+    <nav>
+     <div class="button-container" onclick="window.location.href = 'favorites.html'">
+        <div class="notification-fav"></div>
+        <img src="images/icons/heart.png">
+        <p>Favorite</p>
+     </div>
+     <div class="button-container" onclick="window.location.href = 'cart.html'">
+        <div class="notification-cart"></div>
+        <img src="images/icons/shopping-cart.png">
+        <p>Cosul meu</p>
+     </div>
+    </nav>
+  </div>
+
+  <main>
+    <div class="user-login-fav-container">
+      <div class="user-login-fav">
+        <div style="
+          display: flex;
+          justify-content: center;
+          align-items: center;        
+        ">
+          <img src="images/icons/icon_guest.webp" style="height: 100px;">
+        </div> 
+        <div style="text-align: center;">
+          <h2 style="margin: 10px;">Hei, acum esti un user anonim.</h2>
+          <p style="margin: 10px;">Intra in contul tau sau inregistreaza-te pentru a-ti pastra produsele favorite.</p>
+        </div>
+        <div style="margin: 10px;">
+          <div class="log-in-btn-container js-log-in-btn-container">
+            <div class="indicator">
+              <img src="images/icons/forward.png">
+            </div>
+            <p>Intra in cont</p>
+          </div>
+          <button class="new-account-fav-btn js-new-account-fav-btn" >Cont nou</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid-fav-products js-grid-fav-products"></div>  
+  </main>
+
+  <div id="toastBox"></div>
+
+  <script src="data/fav.js" type="module"></script>
+  <script src="scripts/fav-page.js" type="module"></script>
+</body>
+</html>
